@@ -39,9 +39,10 @@ describe('isNull function', () => {
 
   it('should be return null even when it receives a number as argument', () => {
     //ARRANGE
+    const a = Math.random()
 
     //ACT
-    const result = functions.isNull()
+    const result = functions.isNull(a)
 
     //ASSERT
     expect(result).toEqual(null)
