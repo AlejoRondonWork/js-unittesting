@@ -34,7 +34,7 @@ describe('isNull function', () => {
     const result = functions.isNull()
 
     //ASSERT
-    expect(result).toEqual(null)
+    expect(result).toBeNull()
   })
 
   it('should be return null even when it receives a number as argument', () => {
@@ -45,7 +45,7 @@ describe('isNull function', () => {
     const result = functions.isNull(a)
 
     //ASSERT
-    expect(result).toEqual(null)
+    expect(result).toBeNull()
   })
 })
 
@@ -58,7 +58,7 @@ describe('checkTruthy function', () => {
     const result = functions.checkTruthy(true)
 
     //ASSERT
-    expect(result).toEqual(true)
+    expect(result).toBeTruthy()
   })
 
   it('should be return false when I sent false', () => {
@@ -69,7 +69,7 @@ describe('checkTruthy function', () => {
     const result = functions.checkTruthy(x)
 
     //ASSERT
-    expect(result).toEqual(false)
+    expect(result).toBeFalsy()
   })
 
   it('should be return false when I sent an array=[1,2,3,4,5]', () => {
@@ -80,7 +80,7 @@ describe('checkTruthy function', () => {
     const result = functions.checkTruthy(x)
 
     //ASSERT
-    expect(result).toEqual(false)
+    expect(result).toBeFalsy()
   })
 })
 
@@ -88,8 +88,10 @@ describe('addLastName function', () => {
   it('should be return Pepito Perez when I sent Perez', () => {
     //ARRANGE
     let lastname = 'Perez'
+
     //ACT
     let result = functions.addLastName(lastname)
+
     //ASSERT
     expect(result).toEqual({ firstname: 'Pepito', lastname })
   })
@@ -97,8 +99,10 @@ describe('addLastName function', () => {
   it('should be return Pepito Rondon when I sent Rondon', () => {
     //ARRANGE
     let lastname = 'Rondon'
+
     //ACT
     let result = functions.addLastName(lastname)
+
     //ASSERT
     expect(result).toEqual({ firstname: 'Pepito', lastname })
   })
